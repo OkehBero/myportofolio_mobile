@@ -1,6 +1,5 @@
 import 'package:material_ui/material_ui.dart';
 import 'package:myportofolio_mobile/screens/menu.dart';
-// TODO: Impor halaman ProjectFormPage jika sudah dibuat
 import 'package:myportofolio_mobile/screens/project_form.dart';
 
 class LeftDrawer extends StatelessWidget {
@@ -12,7 +11,6 @@ class LeftDrawer extends StatelessWidget {
       child: ListView(
         children: [
           const DrawerHeader(
-            // TODO: Bagian drawer header
             decoration: BoxDecoration(
               color: Colors.indigo,
             ),
@@ -38,7 +36,6 @@ class LeftDrawer extends StatelessWidget {
               ],
             ),
           ),
-          // TODO: Bagian routing
           ListTile(
             leading: const Icon(Icons.home_outlined),
             title: const Text('Home'),
@@ -56,9 +53,6 @@ class LeftDrawer extends StatelessWidget {
             title: const Text('Add Project'),
             // Navigasi ke halaman tambah proyek
             onTap: () {
-              /*
-              TODO: Buatlah routing ke halaman ProjectFormPage yang akan dibuat nanti.
-              */
               Navigator.pushReplacement(
                 context, MaterialPageRoute(
                   builder: (context) => ProjectFormPage(),
