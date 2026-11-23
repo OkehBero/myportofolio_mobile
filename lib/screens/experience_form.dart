@@ -13,7 +13,7 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
 
   String _title = "";
   String _description = "";
-  String _category = "";
+  String _category = "Full-Time";
   String _thumbnail = "";
   DateTime? _endedAt;
 

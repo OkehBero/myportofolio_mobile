@@ -34,13 +34,13 @@ class ItemCard extends StatelessWidget {
                       builder: (context) => const ProjectFormPage(),
                     ),
                   );
-
-                  if (item.name == "Tambah Experience") {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const ExperienceFormPage()));
-                  }
+                } else if (item.name == "Tambah Pengalaman") {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ExperienceFormPage(),
+                    ),
+                  );
                 }
             },
             child: Container(
