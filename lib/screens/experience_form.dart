@@ -31,6 +31,7 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
     final day = date.day.toString().padLeft(2, '0');
     return '$year-$month-$day';
   }
+
   Future<void> _pickEndDate() async {
     final DateTime? picked = await showDatePicker(
       context: context,
@@ -44,14 +45,13 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
       });
     }
   }
+
   @override
   Widget build(BuildContext context) {
     final Color primaryColor = Theme.of(context).colorScheme.primary;
     return Scaffold(
       appBar: AppBar(
-        title: const Center(
-          child: Text('Add Experience Form'),
-        ),
+        title: const Center(child: Text('Add Experience Form')),
         backgroundColor: primaryColor,
         foregroundColor: Colors.white,
       ),
@@ -165,7 +165,8 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                       return null;
                     }
                     final uri = Uri.tryParse(value.trim());
-                    final isValidUrl = uri != null &&
+                    final isValidUrl =
+                        uri != null &&
                         (uri.scheme == 'http' || uri.scheme == 'https') &&
                         uri.host.isNotEmpty;
                     if (!isValidUrl) {
